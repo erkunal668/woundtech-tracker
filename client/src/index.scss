@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  // width: 100%;
+}
+select, textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #aaa;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 4px;
+  cursor: pointer;
+  text-align: center
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.clinical {
+  padding: 10px;
+  display: grid;
+  gap: 1rem;
+}
+
+.appStyle {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  div{
+    width: 100%;
+  }
+}
+
+.record {
+  width: 100%;
+}

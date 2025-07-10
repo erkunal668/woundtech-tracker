@@ -1,27 +1,30 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../db/db'); // make sure this path is correct
+const db = require('../db/db'); 
 
-// POST /visits — create new visit
 router.post('/', (req, res) => {
   const { clinician_id, patient_id, notes } = req.body;
-  const timestamp = new Date().toISOString();
 
   if (!clinician_id || !patient_id) {
-    return res.status(400).json({ error: 'Clinician and patient are required' });
+    return res.status(400).json({ error: 'clinician_id and patient_id are required.' });
   }
-  
-   query += ` ORDER BY visits.timestamp DESC`;
-   
-  db.run(
-    `INSERT INTO visits (clinician_id, patient_id, timestamp, notes) VALUES (?, ?, ?, ?)`,
-    [clinician_id, patient_id, timestamp, notes],
-    function (err) {
-      if (err) return res.status(500).json({ error: err.message });
-      res.json({ id: this.lastID });
+
+  const timestamp = new Date().toISOString();
+
+  const sql = `INSERT INTO visits (clinician_id, patient_id, timestamp, notes)
+               VALUES (?, ?, ?, ?)`;
+
+  db.run(sql, [clinician_id, patient_id, timestamp, notes], function (err) {
+    if (err) {
+      console.error('DB Insert Error:', err.message);
+      return res.status(500).json({ error: err.message });
     }
-  );
+    res.json({ id: this.lastID });
+  });
 });
+
+
+
 
 // GET /visits — fetch all visits with names
 router.get('/', (req, res) => {
@@ -46,7 +49,7 @@ router.get('/', (req, res) => {
     params.push(patientId);
   }
 
-  query += ` ORDER BY visits.timestamp DESC`;
+  // query += ` ORDER BY visits.timestamp DESC`;
 
   db.all(query, params, (err, rows) => {
     if (err) return res.status(500).json({ error: err.message });

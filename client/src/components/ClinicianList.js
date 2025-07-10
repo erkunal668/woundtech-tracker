@@ -1,5 +1,3 @@
-// client/src/components/ClinicianList.js
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -34,10 +32,10 @@ function ClinicianList({ setFilter, onChange }) {
           placeholder="Clinician name"
           className="border p-2 mr-2"
         />
-        <button onClick={addClinician} className="bg-green-500 text-white p-2 rounded">
+        <button onClick={addClinician} >
           Add
         </button>
-        <button onClick={() => show ? setShow(false) : setShow(true)} className="bg-blue-500 text-white p-2 rounded">
+        <button onClick={() => show ? setShow(false) : setShow(true)} >
          {!show ? "Show Data" : "Hide Data"} 
         </button>
       </div>
@@ -59,5 +57,4 @@ function ClinicianList({ setFilter, onChange }) {
   );
 }
 
-// ✅ THIS LINE IS CRUCIAL:
 export default ClinicianList;

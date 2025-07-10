@@ -27,12 +27,11 @@ function PatientList({ setFilter, onChange }) {
           value={name}
           onChange={e => setName(e.target.value)}
           placeholder="Patient name"
-          className="border p-2 mr-2"
         />
-        <button onClick={addPatient} className="bg-blue-500 text-white p-2 rounded">
+        <button onClick={addPatient}>
           Add
         </button>
-        <button onClick={() => show ? setShow(false) : setShow(true)} className="bg-green-500 text-white p-2 rounded">
+        <button onClick={() => show ? setShow(false) : setShow(true)} >
          {!show ? "Show Data" : "Hide Data"} 
         </button>
       </div>

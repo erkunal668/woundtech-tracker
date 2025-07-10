@@ -21,13 +21,13 @@ function VisitForm({ onSubmit, refresh }) {
 
     try {
       await axios.post('http://localhost:5000/visits', {
-        clinician_id: formData.clinicianId,
-        patient_id: formData.patientId,
+        clinician_id: parseInt(formData.clinicianId),
+        patient_id: parseInt(formData.patientId),
         notes: formData.notes
       });
 
       setFormData({ clinicianId: '', patientId: '', notes: '' });
-      onSubmit(); // trigger refresh
+      onSubmit(); 
     } catch (err) {
       console.error('Error saving visit:', err);
       alert('Failed to save visit.');
@@ -38,11 +38,10 @@ function VisitForm({ onSubmit, refresh }) {
     <form onSubmit={handleSubmit} className="">
       <div className='appStyle'>
       <div >
-        <label className="block">Clinician</label>
+        <label>Clinician</label>
         <select
           value={formData.clinicianId}
           onChange={e => setFormData({ ...formData, clinicianId: e.target.value })}
-          className="border p-2 w-full"
         >
           <option value="">Select Clinician</option>
           {clinicians.map(clinician => (
@@ -53,11 +52,10 @@ function VisitForm({ onSubmit, refresh }) {
         </select>
       </div>
       <div>
-        <label className="block">Patient</label>
+        <label>Patient</label>
         <select
           value={formData.patientId}
           onChange={e => setFormData({ ...formData, patientId: e.target.value })}
-          className="border p-2 w-full"
         >
           <option value="">Select Patient</option>
           {patients.map(patient => (
@@ -69,14 +67,13 @@ function VisitForm({ onSubmit, refresh }) {
       </div>
       </div>
       <div>
-        <label className="block">Notes</label>
+        <label>Notes</label>
         <textarea
           value={formData.notes}
           onChange={e => setFormData({ ...formData, notes: e.target.value })}
-          className="border p-2 w-full"
         />
       </div>
-      <button type="submit" className="">
+      <button type="submit">
         Record Visit
       </button>
     </form>

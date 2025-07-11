@@ -37,3 +37,26 @@ client-server/ # Backend
 .gitignore
 
 
+## 🚀 Getting Started
+
+### 📌 Prerequisites
+
+- Node.js v18+ or v20+
+- npm (comes with Node.js)
+- Git (to clone the repo)
+
+---
+
+## ⚙️ Backend Setup (Node.js + Express)
+
+1. Open terminal in the **`client-server`** directory:
+
+```bash
+cd client-server
+npm install
+
+Start the React app:
+npm start
+
+Start the backend server:
+npm run dev

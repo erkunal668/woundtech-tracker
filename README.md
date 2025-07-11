@@ -1,5 +1,4 @@
-﻿# woundtech-tracker
-# 🩺 Woundtech Tracker App
+﻿# 🩺 Woundtech Tracker App
 
 This is a full-stack application to manage **Clinicians**, **Patients**, and **Visits** using:
 

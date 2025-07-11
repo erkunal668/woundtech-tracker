@@ -21,20 +21,20 @@ This is a full-stack application to manage **Clinicians**, **Patients**, and **V
 
 ##  Project Structure
 
-│
-├── client-server/ # Backend
-│ ├── db/ # SQLite DB & schema
-│ ├── routes/ # Express routes (clinicians, patients, visits)
-│ ├── server.js # Backend entry
-│ └── package.json
-│
-├── client/ # Frontend
-│ ├── src/
-│ │ ├── components/ # React components
-│ │ └── App.js
-│ └── package.json
-│
-├── README.md
-└── .gitignore
+
+client-server/ # Backend
+  ── db/ # SQLite DB & schema
+  ── routes/ # Express routes (clinicians, patients, visits)
+  ── server.js # Backend entry
+  package.json
+
+ client/ # Frontend
+ src/
+  ── components/ # React components
+  ── App.js
+  ── package.json
+
+ README.md
+.gitignore
 
 

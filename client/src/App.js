@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import ClinicianList from './components/ClinicianList';
-import PatientList from './components/PatientList';
+import PatientClinicianList from './components/PatientClinicianList';
 import VisitForm from './components/VisitForm';
 import VisitList from './components/VisitList';
 
@@ -13,17 +12,11 @@ function App() {
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Patient Visit Tracker</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className='appStyle'>
+        <div>
           <div>
           <h2 className="text-xl font-semibold mb-2">Clinicians</h2>
-          <ClinicianList setFilter={setFilter} onChange={triggerRefresh} />
+          <PatientClinicianList setFilter={setFilter} onChange={triggerRefresh} />
           </div>
-          <div>
-          <h2 className="text-xl font-semibold mb-2 mt-4">Patients</h2>
-          <PatientList setFilter={setFilter} onChange={triggerRefresh} />
-          </div>
-    
-
         </div>
         <div>
           <div className='record'>

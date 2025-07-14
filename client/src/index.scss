@@ -63,7 +63,6 @@ ul {
 li {
   margin-bottom: 4px;
   cursor: pointer;
-  text-align: center
 }
 
 li:hover {
@@ -99,3 +98,18 @@ th, td {
 .record {
   width: 100%;
 }
+
+.patientListStyle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem; 
+}
+
+.addShowBtnStyl{
+  display: flex;
+  gap: 1rem;
+  button {
+    width: 100%;
+  }
+}
+

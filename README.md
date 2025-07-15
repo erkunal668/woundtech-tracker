@@ -44,8 +44,7 @@ Follow these steps to get the application up and running on your local machine.
     \`\`\`bash
     git clone <repository-url>
     cd healthcare-appointment-system
-    \`\`\`
-    *(Note: If you downloaded this project directly from v0, you can skip this step.)*
+
 
 2.  **Install dependencies:**
     \`\`\`bash

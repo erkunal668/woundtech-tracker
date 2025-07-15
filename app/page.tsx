@@ -64,7 +64,7 @@ export default function HomePage() {
               </div>
               <Link href="/admin">
                 <Button size="lg" variant="outline" className="w-full bg-transparent">
-                  Admin Dashboard
+                  Patient Visit Tracker
                 </Button>
               </Link>
             </CardContent>
